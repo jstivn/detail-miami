@@ -84,15 +84,15 @@ export const SERVICES_LIST: ServiceItem[] = [
   },
   {
     id: "ceramic-ppf",
-    title: "Ceramic & PPF",
+    title: "Ceramic & PPF Armor",
     category: "Permanent Surface Armor",
     tag: "XPEL 10-MIL // 10H CERAMIC MATRIX",
-    description: "Provides advanced protection with multi-layer ceramic coating and XPEL Paint Protection Film (PPF), shielding your car’s paint from stone chips, extreme Florida UV rays, and Atlantic salt air.",
+    description: "Provides permanent optical defense with multi-layer ceramic coating and XPEL Paint Protection Film (PPF), shielding your vehicle from highway stone chips, intense Florida UV, and Atlantic salt air.",
     features: [
-      "10-Mil self-healing ballistic polyurethane film (wrapped seams)",
+      "Front-End Track Pack (bumper, hood, fenders, mirrors) or full vehicle wrap",
+      "XPEL Ultimate Plus 10-Mil self-healing ballistic polyurethane (wrapped edges)",
       "10H Diamond ceramic coating with 115° hydrophobic contact angle",
-      "Blocks 99.8% of destructive UV-A and UV-B solar radiation",
-      "10-Year written nationwide warranty certificate"
+      "10-Year written manufacturer & studio warranty certificate"
     ],
     duration: "1 - 3 Days",
     priceUSD: 1850,
