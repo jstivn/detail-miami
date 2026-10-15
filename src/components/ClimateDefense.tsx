@@ -17,14 +17,14 @@ export const ClimateDefense: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-6 border-b border-white/[0.08]">
           <div>
             <div className="text-[11px] font-mono tracking-widest text-[#0A84FF] uppercase mb-2">
-              ENGINEERING REGIME // SUNBELT & COASTAL SPECIFICATION
+              ENGINEERING REGIME // SOUTH FLORIDA & COASTAL SPECIFICATION
             </div>
             <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight">
-              HARDENED FOR THE <span className="text-[#C5A48E]">AMERICAN SUNBELT</span>
+              HARDENED FOR THE <span className="text-[#C5A48E]">SOUTH FLORIDA CLIMATE</span>
             </h2>
           </div>
           <div className="max-w-md text-zinc-400 text-sm font-sans leading-relaxed">
-            Standard commercial detailing chemicals break down when subjected to Florida & Texas thermal cycling, extreme UV radiation, and Atlantic coastal salt spray. Our specifications are chemically formulated for harsh southern operating conditions.
+            Standard commercial detailing chemicals break down when subjected to South Florida thermal cycling, extreme UV index, and Atlantic coastal salt air. Our specifications are chemically formulated for harsh coastal operating conditions.
           </div>
         </div>
 

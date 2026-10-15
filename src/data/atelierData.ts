@@ -43,8 +43,8 @@ export interface PackageTier {
 }
 
 export const ATELIER_INFO = {
-  name: "APEX USA",
-  subBrand: "MIAMI • DALLAS • AUSTIN",
+  name: "APEX MIAMI",
+  subBrand: "MIAMI DESIGN DISTRICT ATELIER",
   tagline: "Hypercar Surface Engineering & PPF Atelier",
   location: "2420 NE 2nd Ave, Miami Design District, FL 33137",
   coordinates: "25.7997° N, 80.1918° W",
@@ -64,7 +64,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     tag: "SURFACE ARMOUR",
     title: "10-Mil Self-Healing PPF",
     code: "ISO-PPF-10M",
-    description: "Full-body optical polyurethane engineered specifically for harsh US Sunbelt thermal cycling and high-speed highway debris. Self-heals swirl marks instantly under ambient Florida and Texas heat. Disassembly-free precision pattern application via digital CAD database.",
+    description: "Full-body optical polyurethane engineered specifically for harsh South Florida thermal cycling and high-velocity highway debris on I-95. Self-heals swirl marks instantly under ambient Miami sunshine. Disassembly-free precision pattern application via digital CAD database.",
     specs: [
       "XPEL Ultimate Plus 10-Mil Ballistic Thickness",
       "Digital DAP pattern cutting (Zero razor-to-paint contact)",
@@ -128,7 +128,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     tag: "SOLAR BARRIER",
     title: "Florida DOT-Legal Nano-Ceramic Tint",
     code: "ISO-TINT-IR",
-    description: "Multi-layer nano-ceramic film rejecting 99.8% infrared heat without signal interference. Fully compliant with Florida Statute § 316.2953 and Texas DOT regulations (15% to 30% legal VLT).",
+    description: "Multi-layer nano-ceramic film rejecting 99.8% infrared heat without signal interference. Fully compliant with Florida Statute § 316.2953 regulations (15% to 30% legal VLT).",
     specs: [
       "Up to 98% Total Solar Energy Rejection (TSER)",
       "Zero metallic particles: 100% GPS/Keyless/Radar/5G pass-through",
@@ -173,14 +173,14 @@ export const CASE_STUDIES: CaseStudy[] = [
       curingCycle: "36 hrs IR Chamber"
     },
     priceUSD: 7850,
-    image: "https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&w=1200&q=85"
+    image: "/images/ferrari-sf90-miami.jpg"
   },
   {
     id: "gt3rs",
     vehicle: "Porsche 911 GT3 RS (992)",
     color: "Guards Red with Weissach Package",
     year: "2024",
-    clientArea: "Palm Beach / Coral Gables",
+    clientArea: "Bal Harbour / Coral Gables",
     scope: "Track Armor PPF + Carbon Aerokit Wrap + 1200°C Caliper & Monoblock Rim Ceramic + Sub-Zero Underbody",
     specs: {
       paintDepthBefore: "124 µm (OEM)",
@@ -190,7 +190,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       curingCycle: "24 hrs Cleanroom"
     },
     priceUSD: 6200,
-    image: "/images/porsche-gt3rs-dubai.jpg"
+    image: "/images/porsche-gt3rs-miami.jpg"
   },
   {
     id: "spectre",
@@ -207,7 +207,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       curingCycle: "48 hrs Controlled"
     },
     priceUSD: 9800,
-    image: "https://images.unsplash.com/photo-1631295868223-63265b40d9e4?auto=format&fit=crop&w=1200&q=85"
+    image: "/images/rolls-royce-spectre-miami.jpg"
   }
 ];
 
@@ -246,7 +246,7 @@ export const PACKAGES_DATA: PackageTier[] = [
       "Exposed Carbon Fiber Components Armoured",
       "Zero Disassembly of Critical Sensors/Radar Housings",
       "Digital DAP Cutting with Wrapped Edge Extensions",
-      "Self-Healing Activation Under US Sunbelt Heat",
+      "Self-Healing Activation Under Miami Sun",
       "10H Hydrophobic Top-Coat Infused",
       "Complimentary 30-Day Inspection & Wash"
     ],
@@ -279,12 +279,12 @@ export const CLIMATE_METRICS = [
   {
     metric: "+110°F",
     title: "Thermal Shock Barrier",
-    detail: "Cross-linked elastomeric polyurethane maintains molecular stability without yellowing, bubbling, or edge-lifting under intense Florida & Texas asphalt temperatures."
+    detail: "Cross-linked elastomeric polyurethane maintains molecular stability without yellowing, bubbling, or edge-lifting under intense Florida asphalt temperatures."
   },
   {
     metric: "10-MIL",
     title: "Interstate Debris Defense",
-    detail: "Heavy-duty 254-micron ballistic shield withstands severe high-speed gravel, tire rubber, and construction fallout on I-95, Florida Turnpike, and Texas highways."
+    detail: "Heavy-duty 254-micron ballistic shield withstands severe high-speed gravel, tire rubber, and construction fallout on I-95 and Florida Turnpike."
   },
   {
     metric: "99.8%",
@@ -304,29 +304,28 @@ export const FAQ_DATA = [
     a: "No. Our installations strictly preserve OEM warranties. We utilize factory CAD templates cut via digital DAP plotters, entirely avoiding razor cuts against paintwork and eliminating unnecessary disassembly of calibrated factory bumper clips, parking sensors, and radar arrays."
   },
   {
-    q: "How does the self-healing film perform during Florida and Texas summer heat?",
-    a: "Remarkably. In ambient temperatures above 85°F, the elastomeric top-coat self-heals swirl marks and light abrasions in real time without requiring heat guns or hot water. Under direct sun, minor wash scratches disappear within minutes."
+    q: "How does the self-healing film perform during South Florida summer heat?",
+    a: "Remarkably. In ambient temperatures above 85°F, the elastomeric top-coat self-heals swirl marks and light abrasions in real time without requiring heat guns or hot water. Under direct Miami sun, minor wash scratches disappear within minutes."
   },
   {
     q: "Can you provide Florida DOT-compliant window tinting and documentation?",
-    a: "Yes. Our nano-ceramic window films are 100% compliant with Florida Statute § 316.2953 and Texas DOT regulations (available in 15%, 28%, and 30% legal light transmission). We provide official state compliance certificates with every install."
+    a: "Yes. Our nano-ceramic window films are 100% compliant with Florida Statute § 316.2953 regulations (available in 15%, 28%, and 30% legal light transmission). We provide official state compliance certificates with every install."
   },
   {
     q: "What makes cryogenic dry-ice detailing safer than steam or water pressure washing for exotic hybrids?",
     a: "Dry-ice pellets (-109.3°F / -78.5°C) sublimate directly from solid to gas on contact. There is zero moisture, zero electrical short risk for 400V/800V hybrid powertrains (SF90, Revuelto, 296 GTB, Artura), and zero chemical corrosion on raw magnesium or aluminum components."
   },
   {
-    q: "Do you offer enclosed hydraulic vehicle transport across Florida and interstate corridors to Texas?",
-    a: "Yes. We operate our own dedicated hydraulic enclosed low-loader transporters equipped with soft-winch air-ride systems, serving Miami, Palm Beach, Naples, and Orlando, plus scheduled express transport to our Dallas and Austin collection hubs."
+    q: "Do you offer enclosed hydraulic vehicle transport across South Florida?",
+    a: "Yes. We operate our own dedicated hydraulic enclosed low-loader transporters equipped with soft-winch air-ride systems, serving Miami-Dade, Star Island, Brickell, Bal Harbour, Palm Beach, and Naples private residences directly to our Miami Design District atelier."
   }
 ];
 
 /**
  * 1-Tap SMS Link builder compatible with iOS (iMessage/SMS) and Android
- * Using `?&body=` ensures compatibility across iOS Safari, Chrome, and Android SMS dispatchers.
  */
 export function buildSMSLink(serviceName: string, vehicleModel = "", packageTier = ""): string {
-  let message = `Hello APEX USA (Miami Atelier),\nI would like to inquire about booking a slot for my vehicle.`;
+  let message = `Hello APEX MIAMI (Design District Atelier),\nI would like to inquire about booking a slot for my vehicle.`;
   if (serviceName) message += `\nService: ${serviceName}`;
   if (packageTier) message += `\nPackage: ${packageTier}`;
   if (vehicleModel) message += `\nVehicle: ${vehicleModel}`;
@@ -336,12 +335,12 @@ export function buildSMSLink(serviceName: string, vehicleModel = "", packageTier
 }
 
 export function buildGPSLink(): string {
-  const message = `Hello APEX Concierge, sending my vehicle pickup location for enclosed hydraulic carrier intake:`;
+  const message = `Hello APEX MIAMI Concierge, sending my vehicle pickup location in South Florida for enclosed hydraulic carrier intake:`;
   return `sms:${ATELIER_INFO.smsRaw}?&body=${encodeURIComponent(message)}`;
 }
 
 export function buildWhatsAppLink(serviceName: string, vehicleModel = "", packageTier = ""): string {
-  let message = `Hello APEX USA,\nI would like to inquire about booking a slot for my vehicle.`;
+  let message = `Hello APEX MIAMI,\nI would like to inquire about booking a slot for my vehicle.`;
   if (serviceName) message += `\nService: ${serviceName}`;
   if (packageTier) message += `\nPackage: ${packageTier}`;
   if (vehicleModel) message += `\nVehicle: ${vehicleModel}`;

@@ -31,18 +31,18 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
           <span className="w-2 h-2 bg-[#0A84FF] shadow-[0_0_8px_#0A84FF]"></span>
           <span className="text-white font-semibold">MIAMI DESIGN DISTRICT</span>
           <span className="text-zinc-600">//</span>
-          <span className="text-[#C5A48E]">SUNBELT HYPERCAR DEFENSE</span>
+          <span className="text-[#0A84FF]">SOUTH FLORIDA HYPERCAR DEFENSE</span>
         </div>
 
         {/* Hero Title: Heavy Architectural Typography */}
         <h1 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-white uppercase max-w-5xl leading-[0.92] mb-6">
           SURFACE <span className="text-[#C5A48E]">ARMOUR</span> <br />
-          FOR THE SUNBELT CLIMATE.
+          FOR THE MIAMI CLIMATE.
         </h1>
 
         {/* Technical Subtitle */}
         <p className="font-sans text-base sm:text-lg md:text-xl text-zinc-300 max-w-3xl leading-relaxed mb-10 font-normal">
-          Zero-compromise optical paint protection film (PPF), ultrasonic paint correction, and cryogenic dry-ice detailing. Engineered for <strong className="text-white font-semibold">100°F+ thermal shock</strong>, Atlantic coastal salt humidity, and high-velocity highway debris in Florida and Texas.
+          Zero-compromise optical paint protection film (PPF), ultrasonic paint correction, and cryogenic dry-ice detailing. Engineered for <strong className="text-white font-semibold">100°F+ thermal shock</strong>, Atlantic coastal salt humidity, and high-velocity highway debris in South Florida.
         </p>
 
         {/* Action Buttons: iMessage / 1-Tap SMS & GPS / Spec */}

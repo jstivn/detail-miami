@@ -25,7 +25,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
   const generateDossierText = () => {
     return [
-      `*APEX USA // BAY ADMISSION DOSSIER*`,
+      `*APEX MIAMI // BAY ADMISSION DOSSIER*`,
       `Client: ${clientName || 'Private Collector'}`,
       `Phone: ${clientPhone || '(305) 555-0199'}`,
       `Vehicle: ${vehicle || 'Exotic Hypercar'} (${year})`,
@@ -133,9 +133,9 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 className="w-full px-3.5 py-2.5 bg-zinc-950 border border-white/[0.1] focus:border-[#0A84FF] text-white text-sm outline-none rounded-[2px] font-sans"
               >
                 <option value="Self Drop-off (Miami Design District)">Self Drop-off (Miami Design District)</option>
-                <option value="Enclosed Hydraulic Transporter (Miami-Dade / Broward)">Enclosed Hydraulic Carrier (Miami-Dade)</option>
-                <option value="Enclosed Hydraulic Transporter (Palm Beach / Naples)">Enclosed Hydraulic Carrier (Palm Beach)</option>
-                <option value="Interstate Enclosed Transport (Texas / Dallas / Austin)">Interstate Carrier (Dallas / Austin)</option>
+                <option value="Enclosed Hydraulic Carrier (Miami-Dade / Brickell / Star Island)">Enclosed Carrier (Miami-Dade / Star Island)</option>
+                <option value="Enclosed Hydraulic Carrier (Broward / Fort Lauderdale)">Enclosed Carrier (Fort Lauderdale)</option>
+                <option value="Enclosed Hydraulic Carrier (Palm Beach / Coral Gables / Bal Harbour)">Enclosed Carrier (Palm Beach / Bal Harbour)</option>
               </select>
             </div>
 

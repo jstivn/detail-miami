@@ -14,9 +14,9 @@ export const Footer: React.FC = () => {
                 <Shield className="w-5 h-5 stroke-[1.5]" />
               </div>
               <div>
-                <span className="font-display font-bold text-2xl tracking-wider text-white">APEX USA</span>
-                <div className="text-[10px] font-mono tracking-widest text-[#C5A48E]">
-                  HYPERCAR SURFACE ENGINEERING ATELIER // FL & TX
+                <span className="font-display font-bold text-2xl tracking-wider text-white">APEX MIAMI</span>
+                <div className="text-[10px] font-mono tracking-widest text-[#0A84FF]">
+                  HYPERCAR SURFACE ENGINEERING ATELIER // MIAMI DESIGN DISTRICT
                 </div>
               </div>
             </div>
@@ -137,10 +137,10 @@ export const Footer: React.FC = () => {
         {/* Legal Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[11px] text-zinc-400">
           <div>
-            &copy; {new Date().getFullYear()} APEX USA // HYPERCAR SURFACE ENGINEERING LLC. ALL RIGHTS RESERVED.
+            &copy; {new Date().getFullYear()} APEX MIAMI // HYPERCAR SURFACE ENGINEERING LLC. ALL RIGHTS RESERVED.
           </div>
           <div className="flex items-center gap-6">
-            <span>MIAMI • DALLAS • AUSTIN</span>
+            <span>MIAMI DESIGN DISTRICT, FL</span>
             <span className="text-zinc-600">|</span>
             <span className="text-zinc-400">FL SUNBIZ #L24000198421 // FULLY INSURED</span>
           </div>

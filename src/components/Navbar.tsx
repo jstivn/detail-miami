@@ -72,10 +72,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               </div>
               <div className="flex flex-col">
                 <span className="font-serif tracking-[0.18em] sm:tracking-[0.22em] font-semibold text-white text-xs sm:text-sm uppercase whitespace-nowrap">
-                  APEX USA
+                  APEX MIAMI
                 </span>
-                <span className="text-[9px] font-mono tracking-widest text-[#C5A48E] -mt-0.5 hidden sm:block">
-                  MIAMI • DALLAS • AUSTIN
+                <span className="text-[9px] font-mono tracking-widest text-[#0A84FF] -mt-0.5 hidden sm:block">
+                  DESIGN DISTRICT // ATELIER
                 </span>
               </div>
             </a>
