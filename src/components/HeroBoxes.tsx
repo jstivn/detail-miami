@@ -15,29 +15,45 @@ export const HeroBoxes: React.FC = () => {
           href={DETAIL_MIAMI_INFO.googleMapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="lg:col-span-6 group relative min-h-[260px] rounded-2xl overflow-hidden border border-white/[0.12] bg-gradient-to-br from-zinc-900 to-zinc-950 p-8 flex flex-col justify-between hover:border-red-500/50 transition-all shadow-2xl"
+          className="lg:col-span-6 group relative min-h-[280px] rounded-2xl overflow-hidden border border-white/[0.14] p-8 flex flex-col justify-between hover:border-red-500/60 transition-all shadow-2xl bg-black"
         >
-          {/* Subtle stylized grid & map backdrop */}
-          <div className="absolute inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] [background-size:16px_16px] opacity-25" />
-          <div className="absolute top-0 right-0 w-64 h-64 bg-red-600/10 rounded-full blur-3xl pointer-events-none" />
+          {/* Google Maps Dark Mode Background Image */}
+          <div className="absolute inset-0">
+            <img
+              src="/images/miami-map-dark.jpg"
+              alt="Google Maps Miami Design District"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-65"
+              loading="lazy"
+            />
+            {/* Vignette gradients for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/30" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-black/30" />
+          </div>
 
-          {/* Top tag */}
+          {/* Top tag & pin */}
           <div className="relative z-10 flex items-center justify-between">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-800 text-xs font-mono text-zinc-300">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/80 border border-white/15 text-xs font-mono text-zinc-200 backdrop-blur-md shadow-lg">
+              <span className="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
               <MapPin className="w-3.5 h-3.5 text-red-500" />
               <span>{DETAIL_MIAMI_INFO.coordinates}</span>
             </span>
-            <ExternalLink className="w-4 h-4 text-zinc-400 group-hover:text-red-400 transition-colors" />
+            <div className="w-8 h-8 rounded-full bg-black/75 border border-white/15 flex items-center justify-center backdrop-blur-md group-hover:border-red-500/50 transition-colors">
+              <ExternalLink className="w-4 h-4 text-zinc-300 group-hover:text-red-400" />
+            </div>
           </div>
 
           {/* Bottom Title & Link */}
           <div className="relative z-10 space-y-1.5">
-            <h3 className="font-extrabold text-2xl sm:text-3xl text-white tracking-tight uppercase">
+            <div className="inline-flex items-center gap-2 text-[11px] font-mono text-emerald-400 font-semibold">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span>GOOGLE MAPS VERIFIED LOCATION</span>
+            </div>
+            <h3 className="font-extrabold text-2xl sm:text-3xl text-white tracking-tight uppercase drop-shadow-md">
               In the heart of Miami
             </h3>
-            <p className="text-zinc-400 text-sm font-sans flex items-center gap-2">
+            <p className="text-zinc-300 text-sm font-sans flex items-center gap-2 drop-shadow">
               <span>{DETAIL_MIAMI_INFO.location}</span>
-              <span className="text-red-500 font-semibold group-hover:underline">
+              <span className="text-red-400 font-bold group-hover:underline">
                 • Open Directions &rarr;
               </span>
             </p>
