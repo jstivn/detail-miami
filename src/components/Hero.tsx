@@ -1,15 +1,16 @@
 import React from 'react';
-import { ATELIER_INFO, buildSMSLink, buildGPSLink } from '../data/atelierData';
-import { ArrowRight, MessageSquare, Navigation } from 'lucide-react';
+import { DETAIL_MIAMI_INFO, buildSMSLink } from '../data/detailData';
+import { ArrowRight, MessageSquare, PhoneCall } from 'lucide-react';
 
 interface HeroProps {
-  onOpenBookingModal: () => void;
+  onOpenAppointment: () => void;
+  onOpenCallback: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
+export const Hero: React.FC<HeroProps> = ({ onOpenAppointment, onOpenCallback }) => {
   return (
-    <section id="hero" className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-black border-b border-white/[0.08] pt-28 sm:pt-32 pb-20">
-      {/* Background Video Player */}
+    <section id="main" className="relative w-full min-h-[92vh] flex items-center justify-center overflow-hidden bg-black pt-28 pb-16">
+      {/* Background Video Player with high-contrast overlay */}
       <div className="absolute inset-0 w-full h-full overflow-hidden select-none pointer-events-none">
         <video
           src="/videos/ferrari-ignition.mp4"
@@ -18,85 +19,60 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
           loop
           playsInline
           preload="auto"
-          className="w-full h-full object-cover object-center scale-[1.02] opacity-85"
+          className="w-full h-full object-cover object-center scale-105 opacity-65"
         />
-        {/* Subtle Gradient Mask for Text Contrast */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/75" />
       </div>
 
-      {/* Main Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 w-full flex flex-col items-start justify-center">
-        {/* Monospaced Telemetry Index */}
-        <div className="inline-flex items-center gap-2.5 px-3 py-1 bg-zinc-950/90 border border-white/[0.1] text-zinc-300 font-mono text-xs tracking-wider mb-6 rounded-[2px]">
-          <span className="w-2 h-2 bg-[#0A84FF] shadow-[0_0_8px_#0A84FF]"></span>
-          <span className="text-white font-semibold">MIAMI DESIGN DISTRICT</span>
-          <span className="text-zinc-600">//</span>
-          <span className="text-[#0A84FF]">SOUTH FLORIDA HYPERCAR DEFENSE</span>
+      {/* Hero Content Container */}
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-12 flex flex-col items-center text-center">
+        {/* Eyebrow */}
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-600/15 border border-red-500/30 text-red-400 font-mono text-xs uppercase tracking-widest mb-6">
+          <span className="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+          <span>{DETAIL_MIAMI_INFO.eyebrow}</span>
         </div>
 
-        {/* Hero Title: Heavy Architectural Typography */}
-        <h1 className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-white uppercase max-w-5xl leading-[0.92] mb-6">
-          SURFACE <span className="text-[#C5A48E]">ARMOUR</span> <br />
-          FOR THE MIAMI CLIMATE.
+        {/* Hero Title (matching detaildubai.ae) */}
+        <h1 className="font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-white uppercase max-w-4xl leading-[1.02] mb-6">
+          Car Detailing & Wash <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-400 to-amber-300">
+            Service in Miami
+          </span>
         </h1>
 
-        {/* Technical Subtitle */}
-        <p className="font-sans text-base sm:text-lg md:text-xl text-zinc-300 max-w-3xl leading-relaxed mb-10 font-normal">
-          Zero-compromise optical paint protection film (PPF), ultrasonic paint correction, and cryogenic dry-ice detailing. Engineered for <strong className="text-white font-semibold">100°F+ thermal shock</strong>, Atlantic coastal salt humidity, and high-velocity highway debris in South Florida.
+        {/* Subtext */}
+        <p className="text-base sm:text-lg md:text-xl text-zinc-300 max-w-2xl leading-relaxed mb-10 font-normal">
+          Welcome to <strong className="text-white font-semibold">Detail Miami</strong>, your premier destination for top-notch car wash and detailing services in the heart of the Miami Design District. Exceptional care using eco-friendly products and advanced techniques.
         </p>
 
-        {/* Action Buttons: iMessage / 1-Tap SMS & GPS / Spec */}
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-16">
-          <a
-            href={buildSMSLink("Hero Main Booking")}
-            className="flex items-center justify-center gap-2.5 px-8 py-4 bg-gradient-to-r from-[#0A84FF] to-[#0066E1] hover:from-[#2192FF] hover:to-[#0A73F5] text-white font-mono text-sm tracking-wider font-bold transition-mechanical rounded-[2px] shadow-[0_0_30px_rgba(10,132,255,0.35)] border border-blue-400/40"
-          >
-            <MessageSquare className="w-4 h-4 text-blue-100" />
-            <span>TEXT US FOR INSTANT QUOTE (1-TAP SMS)</span>
-            <ArrowRight className="w-4 h-4" />
-          </a>
-
-          <a
-            href={buildGPSLink()}
-            className="flex items-center justify-center gap-2 px-6 py-4 bg-zinc-950/90 hover:bg-zinc-900 text-zinc-200 hover:text-white border border-white/[0.14] hover:border-[#0A84FF]/50 font-mono text-sm tracking-wider font-medium transition-mechanical rounded-[2px]"
-          >
-            <Navigation className="w-4 h-4 text-[#0A84FF]" />
-            <span>SEND EXACT GPS VIA TEXT</span>
-          </a>
-
+        {/* Hero CTA Buttons matching detaildubai.ae exactly */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+          {/* Make An Appointment Now */}
           <button
-            onClick={onOpenBookingModal}
-            className="px-6 py-4 bg-zinc-950/80 hover:bg-zinc-900 text-zinc-400 hover:text-white border border-white/[0.08] hover:border-white/[0.24] font-mono text-xs tracking-wider transition-mechanical rounded-[2px]"
+            onClick={onOpenAppointment}
+            className="w-full sm:w-auto px-8 py-4 rounded-full bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase tracking-widest shadow-[0_0_35px_rgba(225,29,72,0.45)] transition-all hover:scale-[1.02] flex items-center justify-center gap-2"
           >
-            CUSTOM VEHICLE DOSSIER
+            <span>MAKE AN APPOINTMENT NOW</span>
+            <ArrowRight className="w-4 h-4" />
           </button>
-        </div>
 
-        {/* Telemetry Metrics Strip */}
-        <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-3 pt-6 border-t border-white/[0.1] font-mono">
-          <div className="p-3 bg-zinc-950/60 border border-white/[0.06] rounded-[2px]">
-            <div className="text-[10px] text-zinc-400">FILM GAUGE</div>
-            <div className="text-lg font-bold text-white">10-MIL THICKNESS</div>
-            <div className="text-[11px] text-zinc-400">XPEL Ultimate Plus</div>
-          </div>
+          {/* Request a Call Back (with green active pulse dot as in detaildubai.ae) */}
+          <button
+            onClick={onOpenCallback}
+            className="w-full sm:w-auto px-8 py-4 rounded-full bg-zinc-900/90 hover:bg-zinc-800 text-white border border-white/[0.15] hover:border-white/[0.3] font-semibold text-xs uppercase tracking-widest transition-all flex items-center justify-center gap-2.5"
+          >
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_8px_#10B981]"></span>
+            <span>REQUEST A CALL BACK</span>
+          </button>
 
-          <div className="p-3 bg-zinc-950/60 border border-white/[0.06] rounded-[2px]">
-            <div className="text-[10px] text-zinc-400">THERMAL STABILITY</div>
-            <div className="text-lg font-bold text-[#C5A48E]">280°F RESISTANT</div>
-            <div className="text-[11px] text-zinc-400">Sunbelt Proof Polyurethane</div>
-          </div>
-
-          <div className="p-3 bg-zinc-950/60 border border-white/[0.06] rounded-[2px]">
-            <div className="text-[10px] text-zinc-400">CUT PROTOCOL</div>
-            <div className="text-lg font-bold text-white">100% DIGITAL DAP</div>
-            <div className="text-[11px] text-zinc-400">Zero Paint Blade Contact</div>
-          </div>
-
-          <div className="p-3 bg-zinc-950/60 border border-white/[0.06] rounded-[2px]">
-            <div className="text-[10px] text-zinc-400">WARRANTY TERM</div>
-            <div className="text-lg font-bold text-white">10-YEAR WRITTEN</div>
-            <div className="text-[11px] text-zinc-400">Nationwide Certificate</div>
-          </div>
+          {/* 1-Tap SMS Instant Quote */}
+          <a
+            href={buildSMSLink("Hero Instant Quote")}
+            className="w-full sm:w-auto px-6 py-4 rounded-full bg-blue-600/90 hover:bg-blue-600 text-white border border-blue-400/40 font-semibold text-xs uppercase tracking-widest transition-all flex items-center justify-center gap-2 shadow-lg"
+          >
+            <MessageSquare className="w-4 h-4" />
+            <span>1-TAP SMS</span>
+          </a>
         </div>
       </div>
     </section>

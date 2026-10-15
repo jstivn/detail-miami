@@ -1,55 +1,91 @@
 import React, { useState } from 'react';
-import { Navbar } from './components/Navbar';
+import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
-import { ClimateDefense } from './components/ClimateDefense';
-import { PricingMatrix } from './components/PricingMatrix';
-import { CaseStudies } from './components/CaseStudies';
-import { CleanroomStandards } from './components/CleanroomStandards';
-import { FAQ } from './components/FAQ';
-import { Footer } from './components/Footer';
-import { BookingModal } from './components/BookingModal';
+import { HeroBoxes } from './components/HeroBoxes';
+import { ServicesSection } from './components/ServicesSection';
+import { BeforeAfterSection } from './components/BeforeAfterSection';
+import { TestimonialsSection } from './components/TestimonialsSection';
+import { GallerySection } from './components/GallerySection';
+import { FaqSection } from './components/FaqSection';
+import { PreFooter } from './components/PreFooter';
+import { FooterSection } from './components/FooterSection';
+import { CallbackModal } from './components/CallbackModal';
+import { AppointmentModal } from './components/AppointmentModal';
 
 export const App: React.FC = () => {
-  const [bookingModalOpen, setBookingModalOpen] = useState(false);
-  const [selectedService, setSelectedService] = useState<string>('FULL BODY ARMOUR (10-Mil PPF)');
+  const [appointmentOpen, setAppointmentOpen] = useState(false);
+  const [callbackOpen, setCallbackOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState('Signature Hand Car Wash ($95)');
 
-  const handleOpenBooking = (service?: string) => {
+  const handleOpenAppointment = (service?: string) => {
     if (service) {
-      setSelectedService(service);
+      if (service.includes('Wash')) setSelectedService('Signature Hand Car Wash ($95)');
+      else if (service.includes('Polish')) setSelectedService('Car Polish & Paint Correction ($450)');
+      else if (service.includes('Ceramic') || service.includes('PPF')) setSelectedService('Ceramic & XPEL PPF Armor ($1,850)');
+      else if (service.includes('Detailing')) setSelectedService('Complete Detailing Reconditioning ($280)');
+      else setSelectedService(service);
     }
-    setBookingModalOpen(true);
+    setAppointmentOpen(true);
+  };
+
+  const handleOpenCallback = () => {
+    setCallbackOpen(true);
   };
 
   return (
-    <div className="min-h-screen bg-black text-[#e5e5e7] selection:bg-[#0A84FF] selection:text-white">
-      {/* Floating Liquid Glass Navigation Bar with 1-Tap SMS & Call */}
-      <Navbar onOpenBookingModal={handleOpenBooking} />
+    <div className="min-h-screen bg-black text-[#e5e5e7] selection:bg-red-600 selection:text-white font-sans antialiased overflow-x-hidden">
+      {/* 1. Sticky Navigation with dynamic Book Now button */}
+      <Navigation
+        onOpenAppointment={() => handleOpenAppointment()}
+        onOpenCallback={handleOpenCallback}
+      />
 
-      {/* Hero Section with DetailX Supercar Ignition Loop & 1-Tap SMS / GPS triggers */}
-      <Hero onOpenBookingModal={handleOpenBooking} />
+      {/* 2. Hero Section with Video & Instant CTA Triggers */}
+      <Hero
+        onOpenAppointment={() => handleOpenAppointment()}
+        onOpenCallback={handleOpenCallback}
+      />
 
-      {/* Sunbelt & Coastal Climate Defense Specifications */}
-      <ClimateDefense />
+      {/* 3. Hero Double Boxes: Map (Miami Design District) & Brand Logos + Google 4.9 Stars */}
+      <HeroBoxes />
 
-      {/* Transparent USD Commission Schedule */}
-      <PricingMatrix />
+      {/* 4. Core Services (Car Wash, Polish, Ceramic & PPF, Detailing) */}
+      <ServicesSection
+        onSelectService={(serviceTitle) => handleOpenAppointment(serviceTitle)}
+      />
 
-      {/* Commissioned US Hypercar Case Studies (Miami / Palm Beach) */}
-      <CaseStudies />
+      {/* 5. Interactive Before & After Slider */}
+      <BeforeAfterSection />
 
-      {/* Cleanroom Standards & Miami Design District Tooling */}
-      <CleanroomStandards />
+      {/* 6. Client Testimonials (Verified Google Reviews) */}
+      <TestimonialsSection />
 
-      {/* Hypercar Owner Technical FAQ */}
-      <FAQ />
+      {/* 7. Gallery Grid */}
+      <GallerySection
+        onOpenAppointment={() => handleOpenAppointment()}
+      />
 
-      {/* Google Business Profile & State Trust Footer */}
-      <Footer />
+      {/* 8. Frequently Asked Questions Accordion */}
+      <FaqSection />
 
-      {/* Direct 1-Tap SMS & Confidential Dossier Modal */}
-      <BookingModal
-        isOpen={bookingModalOpen}
-        onClose={() => setBookingModalOpen(false)}
+      {/* 9. Pre-Footer Call to Action Banner */}
+      <PreFooter
+        onOpenAppointment={() => handleOpenAppointment()}
+      />
+
+      {/* 10. Official Trust Footer with GBP Florida Registration */}
+      <FooterSection />
+
+      {/* 11. Request A Call Back Modal */}
+      <CallbackModal
+        isOpen={callbackOpen}
+        onClose={() => setCallbackOpen(false)}
+      />
+
+      {/* 12. Book An Appointment Modal */}
+      <AppointmentModal
+        isOpen={appointmentOpen}
+        onClose={() => setAppointmentOpen(false)}
         defaultService={selectedService}
       />
     </div>
