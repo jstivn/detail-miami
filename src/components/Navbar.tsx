@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ATELIER_INFO, buildWhatsAppLink } from '../data/atelierData';
+import { ATELIER_INFO, buildSMSLink } from '../data/atelierData';
 import { MoreHorizontal, X, Phone, MessageSquare } from 'lucide-react';
 
 interface NavbarProps {
@@ -70,9 +70,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                   <circle cx="12" cy="14" r="1.5" fill="currentColor" />
                 </svg>
               </div>
-              <span className="font-serif tracking-[0.18em] sm:tracking-[0.22em] font-semibold text-white text-xs sm:text-sm uppercase whitespace-nowrap">
-                APEX DUBAI
-              </span>
+              <div className="flex flex-col">
+                <span className="font-serif tracking-[0.18em] sm:tracking-[0.22em] font-semibold text-white text-xs sm:text-sm uppercase whitespace-nowrap">
+                  APEX USA
+                </span>
+                <span className="text-[9px] font-mono tracking-widest text-[#C5A48E] -mt-0.5 hidden sm:block">
+                  MIAMI • DALLAS • AUSTIN
+                </span>
+              </div>
             </a>
 
             {/* Subtle Divider (Desktop only) */}
@@ -105,7 +110,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               })}
             </nav>
 
-            {/* Mobile menu toggle button (троеточие) */}
+            {/* Mobile menu toggle button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden p-1.5 text-zinc-300 hover:text-white ml-2 rounded-full hover:bg-white/10 transition-colors"
@@ -119,28 +124,27 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
             </button>
           </div>
 
-          {/* Desktop Only Action Pill Buttons (Hidden on mobile) */}
+          {/* Desktop Only Action Pill Buttons: 1-Tap SMS & Call */}
           <div className="hidden lg:flex items-center gap-2 sm:gap-2.5 shrink-0">
             <a
-              href={buildWhatsAppLink("Header Liquid Concierge")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="liquid-glass-btn-wa inline-flex items-center justify-center h-11 sm:h-12 px-4 sm:px-5 rounded-[9999px] text-xs font-sans font-medium text-white tracking-wide transition-all whitespace-nowrap"
+              href={buildSMSLink("Header Liquid Concierge")}
+              className="liquid-glass-btn-sms inline-flex items-center justify-center gap-1.5 h-11 sm:h-12 px-4 sm:px-5 rounded-[9999px] text-xs font-sans font-medium text-white tracking-wide transition-all whitespace-nowrap shadow-md"
             >
-              WhatsApp
+              <MessageSquare className="w-3.5 h-3.5 text-blue-200" />
+              <span>1-Tap SMS</span>
             </a>
 
             <a
               href={`tel:${ATELIER_INFO.phoneRaw}`}
               className="liquid-glass-btn-call inline-flex items-center justify-center h-11 sm:h-12 px-4 sm:px-5 rounded-[9999px] text-xs font-sans font-medium text-white tracking-wide transition-all whitespace-nowrap"
             >
-              Call
+              <span>Call (305) 555-0199</span>
             </a>
           </div>
         </div>
       </div>
 
-      {/* Mobile Drawer Dropdown (With WhatsApp, Call, Links & Specify Build) */}
+      {/* Mobile Drawer Dropdown (With 1-Tap SMS, Call, Links & Specify Build) */}
       {mobileMenuOpen && (
         <div className="lg:hidden mt-3 w-[calc(100vw-32px)] max-w-xs mx-auto p-4 liquid-glass-nav rounded-3xl flex flex-col gap-2 pointer-events-auto border border-white/25 shadow-2xl backdrop-blur-2xl animate-in fade-in slide-in-from-top-2 duration-200">
           {navLinks.map((link) => (
@@ -165,17 +169,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
             </a>
           ))}
 
-          {/* Mobile Direct Action Buttons: WhatsApp & Call */}
+          {/* Mobile Direct Action Buttons: 1-Tap SMS & Direct Call */}
           <div className="pt-2.5 mt-1 border-t border-white/10 flex items-center gap-2">
             <a
-              href={buildWhatsAppLink("Mobile Menu Concierge")}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={buildSMSLink("Mobile Menu Concierge")}
               onClick={() => setMobileMenuOpen(false)}
-              className="liquid-glass-btn-wa flex-1 py-2.5 text-center text-xs font-medium text-white rounded-full flex items-center justify-center gap-1.5 transition-all shadow-sm"
+              className="liquid-glass-btn-sms flex-1 py-2.5 text-center text-xs font-medium text-white rounded-full flex items-center justify-center gap-1.5 transition-all shadow-md"
             >
-              <MessageSquare className="w-3.5 h-3.5 text-[#E2CDBE]" />
-              <span>WhatsApp</span>
+              <MessageSquare className="w-3.5 h-3.5 text-blue-200" />
+              <span>1-Tap SMS</span>
             </a>
 
             <a

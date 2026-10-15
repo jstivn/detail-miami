@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FAQ_DATA } from '../data/atelierData';
-import { ChevronDown, HelpCircle } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 export const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -14,14 +14,14 @@ export const FAQ: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="text-[11px] font-mono tracking-widest text-[#C5A48E] uppercase mb-2">
+          <div className="text-[11px] font-mono tracking-widest text-[#0A84FF] uppercase mb-2">
             TECHNICAL ASSURANCE // OWNER FAQS
           </div>
           <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight">
             FREQUENTLY ASKED <span className="text-[#C5A48E]">QUESTIONS</span>
           </h2>
           <p className="max-w-xl mx-auto mt-4 text-zinc-400 text-sm font-sans leading-relaxed">
-            Essential operational queries regarding dealership warranty retention, GCC heat tolerance, and RTA Dubai vehicle compliance.
+            Essential operational queries regarding dealership warranty retention, Sunbelt heat tolerance, and Florida DOT vehicle compliance.
           </p>
         </div>
 
@@ -43,7 +43,7 @@ export const FAQ: React.FC = () => {
                     {item.q}
                   </span>
                   <div
-                    className={`p-1.5 bg-zinc-900 border border-white/[0.08] text-[#C5A48E] rounded-[2px] transition-transform duration-300 ${
+                    className={`p-1.5 bg-zinc-900 border border-white/[0.08] text-[#0A84FF] rounded-[2px] transition-transform duration-300 ${
                       isOpen ? 'rotate-180' : ''
                     }`}
                   >

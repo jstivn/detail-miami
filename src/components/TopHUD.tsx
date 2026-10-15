@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { ATELIER_INFO } from '../data/atelierData';
-import { Phone, MessageSquare, Compass } from 'lucide-react';
+import { Phone, MessageSquare, Compass, ShieldCheck } from 'lucide-react';
 
 export const TopHUD: React.FC = () => {
-  const [dubaiTime, setDubaiTime] = useState<string>('');
+  const [estTime, setEstTime] = useState<string>('');
 
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
-      // Dubai is UTC+4
+      // Eastern Time (Miami / New York)
       const options: Intl.DateTimeFormatOptions = {
-        timeZone: 'Asia/Dubai',
+        timeZone: 'America/New_York',
         hour: '2-digit',
         minute: '2-digit',
         second: '2-digit',
         hour12: false
       };
-      setDubaiTime(new Intl.DateTimeFormat('en-GB', options).format(now));
+      setEstTime(new Intl.DateTimeFormat('en-US', options).format(now));
     };
 
     updateTime();
@@ -30,41 +30,39 @@ export const TopHUD: React.FC = () => {
         {/* Left: Telemetry & Location */}
         <div className="flex items-center gap-4 flex-wrap">
           <div className="flex items-center gap-1.5 text-zinc-300">
-            <span className="w-1.5 h-1.5 bg-emerald-500 rounded-none animate-pulse"></span>
-            <span>GST TIME:</span>
-            <span className="text-white font-semibold">{dubaiTime ? `${dubaiTime} GST` : '09:00:00 GST'}</span>
+            <span className="w-1.5 h-1.5 bg-blue-500 rounded-none animate-pulse"></span>
+            <span>EST TIME:</span>
+            <span className="text-white font-semibold">{estTime ? `${estTime} EST` : '09:00:00 EST'}</span>
           </div>
 
           <div className="hidden md:flex items-center gap-1.5 text-zinc-400">
             <Compass className="w-3 h-3 text-[#C5A48E]" />
-            <span>{ATELIER_INFO.coordinates} // AL QUOZ 3</span>
+            <span>{ATELIER_INFO.coordinates} // MIAMI DESIGN DISTRICT</span>
           </div>
 
           <div className="hidden lg:flex items-center gap-1.5 text-zinc-400">
             <span className="text-zinc-600">//</span>
-            <span className="text-amber-400/90 font-medium">BAYS: 3 OF 8 ADMISSION SLOTS OPEN</span>
+            <span className="text-amber-400/90 font-medium">BAYS: 2 OF 8 ADMISSION SLOTS OPEN</span>
           </div>
         </div>
 
-        {/* Right: Direct Concierge Actions */}
+        {/* Right: Direct Concierge Actions (Phone + 1-Tap SMS) */}
         <div className="flex items-center gap-4 ml-auto">
           <a 
             href={`tel:${ATELIER_INFO.phoneRaw}`}
             className="flex items-center gap-1.5 text-zinc-300 hover:text-white transition-colors"
           >
             <Phone className="w-3 h-3 text-[#C5A48E]" />
-            <span className="hidden sm:inline">OFFICE:</span>
+            <span className="hidden sm:inline">DISPATCH:</span>
             <span>{ATELIER_INFO.phoneDisplay}</span>
           </a>
 
           <a 
-            href={`https://wa.me/${ATELIER_INFO.whatsappRaw}?text=${encodeURIComponent('Hello APEX DUBAI, I require immediate supercar slot consultation.')}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-[#C5A48E] hover:text-white transition-colors font-medium border-l border-white/[0.08] pl-3"
+            href={`sms:${ATELIER_INFO.smsRaw}?&body=${encodeURIComponent('Hello APEX USA (Miami Atelier), I require an instant quote & bay consultation.')}`}
+            className="flex items-center gap-1.5 text-blue-400 hover:text-blue-300 transition-colors font-medium border-l border-white/[0.08] pl-3"
           >
             <MessageSquare className="w-3 h-3" />
-            <span>WHATSAPP CONCIERGE</span>
+            <span>TEXT US (1-TAP SMS)</span>
           </a>
         </div>
       </div>

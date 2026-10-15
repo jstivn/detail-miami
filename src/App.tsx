@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { ClimateDefense } from './components/ClimateDefense';
-import { CaseStudies } from './components/CaseStudies';
 import { PricingMatrix } from './components/PricingMatrix';
+import { CaseStudies } from './components/CaseStudies';
 import { CleanroomStandards } from './components/CleanroomStandards';
 import { FAQ } from './components/FAQ';
 import { Footer } from './components/Footer';
@@ -21,32 +21,32 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-[#e5e5e7] selection:bg-[#C5A48E] selection:text-black">
-      {/* Floating Liquid Glass Navigation Bar */}
+    <div className="min-h-screen bg-black text-[#e5e5e7] selection:bg-[#0A84FF] selection:text-white">
+      {/* Floating Liquid Glass Navigation Bar with 1-Tap SMS & Call */}
       <Navbar onOpenBookingModal={handleOpenBooking} />
 
-      {/* Hero Section with DetailX Supercar Ignition Loop */}
+      {/* Hero Section with DetailX Supercar Ignition Loop & 1-Tap SMS / GPS triggers */}
       <Hero onOpenBookingModal={handleOpenBooking} />
 
-      {/* Dubai Climate Hardening & GCC Specifications */}
+      {/* Sunbelt & Coastal Climate Defense Specifications */}
       <ClimateDefense />
 
-      {/* Transparent AED Commission Schedule */}
+      {/* Transparent USD Commission Schedule */}
       <PricingMatrix />
 
-      {/* Dubai Hypercar Delivery Case Studies */}
+      {/* Commissioned US Hypercar Case Studies (Miami / Palm Beach) */}
       <CaseStudies />
 
-      {/* Cleanroom Standards & Al Quoz 3 Tooling */}
+      {/* Cleanroom Standards & Miami Design District Tooling */}
       <CleanroomStandards />
 
       {/* Hypercar Owner Technical FAQ */}
       <FAQ />
 
-      {/* Local SEO Dubai Footer */}
+      {/* Google Business Profile & State Trust Footer */}
       <Footer />
 
-      {/* Direct WhatsApp Dossier Intake Modal */}
+      {/* Direct 1-Tap SMS & Confidential Dossier Modal */}
       <BookingModal
         isOpen={bookingModalOpen}
         onClose={() => setBookingModalOpen(false)}

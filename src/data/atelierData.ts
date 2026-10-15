@@ -7,7 +7,7 @@ export interface ServiceItem {
   specs: string[];
   duration: string;
   warranty: string;
-  startingPriceAED: number;
+  startingPriceUSD: number;
 }
 
 export interface CaseStudy {
@@ -24,7 +24,7 @@ export interface CaseStudy {
     filmThickness: string;
     curingCycle: string;
   };
-  priceAED: number;
+  priceUSD: number;
   image: string;
 }
 
@@ -33,27 +33,29 @@ export interface PackageTier {
   name: string;
   subtitle: string;
   badge?: string;
-  sportsCarAED: number;
-  supercarAED: number;
-  hypercarAED: number;
-  suvAED: number;
+  sportsCarUSD: number;
+  supercarUSD: number;
+  hypercarUSD: number;
+  suvUSD: number;
   turnaround: string;
   features: string[];
   warranty: string;
 }
 
 export const ATELIER_INFO = {
-  name: "APEX DUBAI",
+  name: "APEX USA",
+  subBrand: "MIAMI • DALLAS • AUSTIN",
   tagline: "Hypercar Surface Engineering & PPF Atelier",
-  location: "Street 18, Warehouse 4B, Al Quoz Industrial Area 3, Dubai, UAE",
-  coordinates: "25.1372° N, 55.2341° E",
-  phoneDisplay: "+971 4 399 2140",
-  phoneRaw: "+97143992140",
-  whatsappRaw: "971508924410",
-  email: "concierge@apexdetailing.ae",
-  hours: "MON - SUN: 09:00 - 21:00 GST",
-  vatTRN: "100482910400003",
-  tradeLicense: "DED-948210",
+  location: "2420 NE 2nd Ave, Miami Design District, FL 33137",
+  coordinates: "25.7997° N, 80.1918° W",
+  phoneDisplay: "(305) 555-0199",
+  phoneRaw: "+13055550199",
+  smsRaw: "+13055550199",
+  whatsappRaw: "13055550199",
+  email: "concierge@apexsurface.com",
+  hours: "MON - SAT: 08:30 - 19:30 EST // SUN: VIP ADMISSION ONLY",
+  licenseInfo: "FL Entity #L24000198421 • APEX SURFACE ENGINEERING LLC",
+  stateRegistration: "State of Florida Division of Corporations (Sunbiz) Active LLC",
 };
 
 export const SERVICES_DATA: ServiceItem[] = [
@@ -62,23 +64,23 @@ export const SERVICES_DATA: ServiceItem[] = [
     tag: "SURFACE ARMOUR",
     title: "10-Mil Self-Healing PPF",
     code: "ISO-PPF-10M",
-    description: "Full-body optical polyurethane engineered specifically for GCC harsh conditions. Self-heals swirl marks instantly under ambient Dubai heat. Disassembly-free precision pattern application via digital CAD database.",
+    description: "Full-body optical polyurethane engineered specifically for harsh US Sunbelt thermal cycling and high-speed highway debris. Self-heals swirl marks instantly under ambient Florida and Texas heat. Disassembly-free precision pattern application via digital CAD database.",
     specs: [
-      "XPEL Ultimate Plus 10-Mil Thickness",
+      "XPEL Ultimate Plus 10-Mil Ballistic Thickness",
       "Digital DAP pattern cutting (Zero razor-to-paint contact)",
       "Full panel edge wrap for invisible seam alignment",
       "Optical clarity refractive index matched to factory clearcoat"
     ],
     duration: "4 - 5 Days",
-    warranty: "10-Year Manufacturer Transferable",
-    startingPriceAED: 18500
+    warranty: "10-Year Nationwide Transferable Warranty",
+    startingPriceUSD: 5500
   },
   {
     id: "paint-correction",
     tag: "OPTICAL CLARITY",
     title: "Multi-Stage Nanotech Paint Correction",
     code: "ISO-CORR-MS",
-    description: "Surgical removal of micro-scratches, buffer trails, and sand pitting. Paint thickness continuously verified with DeFelsko PosiTector ultrasonic gauges to preserve maximum clearcoat depth.",
+    description: "Surgical removal of micro-scratches, buffer trails, factory orange peel, and wash haze. Paint thickness continuously verified with DeFelsko PosiTector ultrasonic gauges to preserve maximum clearcoat depth.",
     specs: [
       "3 to 4 stage compound & micro-fine jeweling polish",
       "DeFelsko multi-point ultrasonic paint depth profiling",
@@ -87,62 +89,62 @@ export const SERVICES_DATA: ServiceItem[] = [
     ],
     duration: "2 - 3 Days",
     warranty: "Lifetime Swirl-Free Handover Certificate",
-    startingPriceAED: 4800
+    startingPriceUSD: 1450
   },
   {
     id: "ceramic-matrix",
     tag: "MOLECULAR BOND",
     title: "10H Diamond Matrix Ceramic",
     code: "ISO-CER-10H",
-    description: "Cross-linking siloxane matrix delivering extreme hydrophobic properties (115° contact angle). Short-wave infrared lamp baked at 70°C for impervious resistance against desert fallout, industrial soot, and bird droppings.",
+    description: "Cross-linking siloxane matrix delivering extreme hydrophobic properties (115° contact angle). Short-wave infrared lamp baked at 160°F for impervious resistance against Atlantic coastal salt spray, industrial fallout, and acidic lovebug damage.",
     specs: [
       "True 10H pencil hardness diamond matrix",
       "1200°C thermal flashpoint tolerance (Exhaust & Caliper safe)",
       "99.8% UV-A and UV-B solar radiation reflection",
-      "Oleophobic slickness repelling Dubai road grime & saline mist"
+      "Oleophobic slickness repelling coastal salt fog & road grime"
     ],
     duration: "2 Days",
     warranty: "5-Year Guarantee with Annual Telemetry Check",
-    startingPriceAED: 6500
+    startingPriceUSD: 1950
   },
   {
     id: "cryo-detailing",
     tag: "CRYOGENIC DECONTAMINATION",
     title: "Sub-Zero Dry-Ice Detailing",
     code: "ISO-CRYO-78",
-    description: "Non-abrasive blast cleaning utilizing solid CO2 pellets at -78.5°C. Sublimates on contact, removing baked road grease, cosmoline, and sand sediment from underbody, suspension linkages, and engine bay with zero moisture.",
+    description: "Non-abrasive blast cleaning utilizing solid CO2 pellets at -109.3°F (-78.5°C). Sublimates on contact, removing baked road grease, cosmoline, and carbon sediment from underbody, suspension linkages, and engine bay with zero moisture.",
     specs: [
       "Pure recycled food-grade solid CO2 cryogenic pellets",
-      "100% moisture-free: zero short-circuit risk for hybrid systems",
+      "100% moisture-free: zero short-circuit risk for hybrid systems (SF90, Revuelto)",
       "Restores raw magnesium, aluminum, and titanium castings",
       "Non-conductive, zero solvent runoff, environmentally certified"
     ],
     duration: "1 - 2 Days",
     warranty: "Cleanroom Handover Spec",
-    startingPriceAED: 4200
+    startingPriceUSD: 1250
   },
   {
     id: "heat-tint",
     tag: "SOLAR BARRIER",
-    title: "RTA-Spec Nano-Ceramic Window Tint",
+    title: "Florida DOT-Legal Nano-Ceramic Tint",
     code: "ISO-TINT-IR",
-    description: "Multi-layer nano-ceramic film rejecting 99.8% infrared heat without signal interference. Fully compliant with Dubai RTA road safety regulations (30% to 50% VLT).",
+    description: "Multi-layer nano-ceramic film rejecting 99.8% infrared heat without signal interference. Fully compliant with Florida Statute § 316.2953 and Texas DOT regulations (15% to 30% legal VLT).",
     specs: [
       "Up to 98% Total Solar Energy Rejection (TSER)",
-      "Zero metallic particles: 100% GPS/Keyless/5G pass-through",
-      "Reduces supercar cabin cockpit temperature by up to 18°C",
-      "Official RTA compliance certificate provided"
+      "Zero metallic particles: 100% GPS/Keyless/Radar/5G pass-through",
+      "Reduces supercar cockpit heat soak by up to 25°F",
+      "Official state DOT compliance certificate provided"
     ],
     duration: "4 Hours",
     warranty: "Lifetime Delamination & Bubble Warranty",
-    startingPriceAED: 2600
+    startingPriceUSD: 750
   },
   {
     id: "interior-barrier",
     tag: "CABIN PRESERVATION",
     title: "Bespoke Leather & Alcantara Barrier",
     code: "ISO-INT-FEP",
-    description: "Breathable fluoropolymer sealant protecting aniline leathers and Alcantara against perspiration, dye transfer from denim, and desert dryness without altering natural matte texture or tactile grip.",
+    description: "Breathable fluoropolymer sealant protecting aniline leathers and Alcantara against perspiration, dye transfer from denim, and high subtropical humidity without altering natural matte texture or tactile grip.",
     specs: [
       "Nano-breathable membrane: preserves leather breathing",
       "Tested on Connolly, Semi-Aniline, and Nappa hides",
@@ -151,7 +153,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     ],
     duration: "1 Day",
     warranty: "2-Year Cabin Surface Protection",
-    startingPriceAED: 3400
+    startingPriceUSD: 950
   }
 ];
 
@@ -161,8 +163,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     vehicle: "Ferrari SF90 Stradale Assetto Fiorano",
     color: "Giallo Montecarlo (Triple Layer Pearl)",
     year: "2024",
-    clientArea: "Downtown Dubai / Al Barari",
-    scope: "Full-Body 10-Mil Self-Healing PPF + Dry-Ice Engine Bay Detailing + 50% IR Ceramic Glass",
+    clientArea: "Star Island, Miami Beach / Brickell",
+    scope: "Full-Body 10-Mil Self-Healing PPF + Dry-Ice Engine Bay Detailing + 20% IR Ceramic Glass",
     specs: {
       paintDepthBefore: "118 µm (OEM clear)",
       paintDepthAfter: "115 µm (Corrected) + 250 µm PPF",
@@ -170,16 +172,16 @@ export const CASE_STUDIES: CaseStudy[] = [
       filmThickness: "10.0 Mil (254 µm)",
       curingCycle: "36 hrs IR Chamber"
     },
-    priceAED: 24500,
+    priceUSD: 7850,
     image: "https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&w=1200&q=85"
   },
   {
     id: "gt3rs",
     vehicle: "Porsche 911 GT3 RS (992)",
-    color: "Guards Red with Pyro Red Magnesium Wheels",
+    color: "Guards Red with Weissach Package",
     year: "2024",
-    clientArea: "Dubai Hills Estate",
-    scope: "Track Armor PPF + Carbon Aerokit Wrap + 1200°C Caliper & Rim Ceramic + Sub-Zero Underbody",
+    clientArea: "Palm Beach / Coral Gables",
+    scope: "Track Armor PPF + Carbon Aerokit Wrap + 1200°C Caliper & Monoblock Rim Ceramic + Sub-Zero Underbody",
     specs: {
       paintDepthBefore: "124 µm (OEM)",
       paintDepthAfter: "122 µm + Track PPF",
@@ -187,15 +189,15 @@ export const CASE_STUDIES: CaseStudy[] = [
       filmThickness: "10.0 Mil Impact",
       curingCycle: "24 hrs Cleanroom"
     },
-    priceAED: 19800,
+    priceUSD: 6200,
     image: "/images/porsche-gt3rs-dubai.jpg"
   },
   {
     id: "spectre",
     vehicle: "Rolls-Royce Spectre",
-    color: "Black Diamond / English White Coachline",
+    color: "Black Diamond / Mandarin Coachline",
     year: "2025",
-    clientArea: "Palm Jumeirah",
+    clientArea: "Fisher Island / Sunny Isles",
     scope: "Satin Stealth Matte PPF Conversion + White Leather Fluoropolymer Matrix + Silent Cabin Glass",
     specs: {
       paintDepthBefore: "145 µm",
@@ -204,7 +206,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       filmThickness: "10.0 Mil Satin",
       curingCycle: "48 hrs Controlled"
     },
-    priceAED: 31000,
+    priceUSD: 9800,
     image: "https://images.unsplash.com/photo-1631295868223-63265b40d9e4?auto=format&fit=crop&w=1200&q=85"
   }
 ];
@@ -214,18 +216,18 @@ export const PACKAGES_DATA: PackageTier[] = [
     id: "track-pack",
     name: "TRACK ARMOUR",
     subtitle: "High-Velocity Impact Zones",
-    sportsCarAED: 7500,
-    supercarAED: 8500,
-    hypercarAED: 11000,
-    suvAED: 9500,
+    sportsCarUSD: 2250,
+    supercarUSD: 2750,
+    hypercarUSD: 3500,
+    suvUSD: 2950,
     turnaround: "2 Days",
     features: [
-      "Front Bumper & Lip Spoilers 100% Covered",
+      "Front Bumper & Lip Splitters 100% Covered",
       "Full Hood & Extended Fender Protection",
       "Wing Mirrors & Rocker Panels Shield",
-      "Luggage Area & Rear Arch Impact Flares",
+      "Luggage Area & Rear Quarter Impact Flares",
       "Headlights & Carbon Intakes Protected",
-      "Handover with XPEL Warranty Certificate"
+      "Handover with XPEL Nationwide Warranty Certificate"
     ],
     warranty: "10-Year Written Warranty"
   },
@@ -233,18 +235,18 @@ export const PACKAGES_DATA: PackageTier[] = [
     id: "full-body-armour",
     name: "FULL BODY ARMOUR",
     subtitle: "100% Panel Edge-Wrapped Coverage",
-    badge: "MOST POPULAR IN DUBAI",
-    sportsCarAED: 16500,
-    supercarAED: 18500,
-    hypercarAED: 24000,
-    suvAED: 21000,
+    badge: "MOST REQUESTED IN SOUTH FLORIDA",
+    sportsCarUSD: 4950,
+    supercarUSD: 5500,
+    hypercarUSD: 7500,
+    suvUSD: 6500,
     turnaround: "4 - 5 Days",
     features: [
       "100% Painted Bodywork Wrapped & Tucked",
       "Exposed Carbon Fiber Components Armoured",
-      "Zero Disassembly of Critical Sensors/Housings",
-      "Digital DAP Cutting with Edge Extensions",
-      "Self-Healing Activation Under UAE Sun",
+      "Zero Disassembly of Critical Sensors/Radar Housings",
+      "Digital DAP Cutting with Wrapped Edge Extensions",
+      "Self-Healing Activation Under US Sunbelt Heat",
       "10H Hydrophobic Top-Coat Infused",
       "Complimentary 30-Day Inspection & Wash"
     ],
@@ -255,19 +257,19 @@ export const PACKAGES_DATA: PackageTier[] = [
     name: "APEX CONNOISSEUR",
     subtitle: "Uncompromising Bespoke Commission",
     badge: "COLLECTOR SPECIFICATION",
-    sportsCarAED: 24000,
-    supercarAED: 26000,
-    hypercarAED: 35000,
-    suvAED: 29500,
+    sportsCarUSD: 7500,
+    supercarUSD: 8500,
+    hypercarUSD: 11500,
+    suvUSD: 9500,
     turnaround: "6 Days",
     features: [
       "Everything in Full Body Armour Package",
       "Cryogenic Dry-Ice Sub-Zero Engine & Chassis Cleaning",
-      "RTA-Legal 99.8% IR Nano-Ceramic Window Tinting",
+      "Florida DOT-Legal 99.8% IR Nano-Ceramic Window Tinting",
       "1200°C Thermal Ceramic on Wheels & Brake Calipers",
       "Full Cabin Aniline Leather & Alcantara Barrier",
       "DeFelsko Ultrasonic Paint Telemetry Dossier",
-      "Enclosed White-Glove Supercar Flatbed Transport"
+      "Enclosed White-Glove Supercar Hydraulic Carrier Delivery"
     ],
     warranty: "10-Year PPF + 5-Year Ceramic Master Warranty"
   }
@@ -275,52 +277,71 @@ export const PACKAGES_DATA: PackageTier[] = [
 
 export const CLIMATE_METRICS = [
   {
-    metric: "+52°C",
+    metric: "+110°F",
     title: "Thermal Shock Barrier",
-    detail: "Cross-linked elastomeric polyurethane maintains molecular stability without yellowing, bubbling, or edge-lifting under scorching UAE direct sunlight."
+    detail: "Cross-linked elastomeric polyurethane maintains molecular stability without yellowing, bubbling, or edge-lifting under intense Florida & Texas asphalt temperatures."
   },
   {
     metric: "10-MIL",
-    title: "Desert Sand Protection",
-    detail: "Heavy-duty 254-micron ballistic shield withstands severe sandstorm abrasive blasting on Sheikh Zayed Road at speeds over 250 km/h."
+    title: "Interstate Debris Defense",
+    detail: "Heavy-duty 254-micron ballistic shield withstands severe high-speed gravel, tire rubber, and construction fallout on I-95, Florida Turnpike, and Texas highways."
   },
   {
     metric: "99.8%",
-    title: "Infrared Solar Rejection",
-    detail: "Nano-ceramic crystal technology reflects infrared thermal radiation, preventing carbon fiber resin oxidation and clearcoat embrittlement."
+    title: "Infrared & UV Solar Rejection",
+    detail: "Nano-ceramic crystal technology reflects ultraviolet and infrared radiation, preventing carbon resin oxidation and clearcoat embrittlement."
   },
   {
     metric: "115°",
-    title: "Contact Angle Hydrophobicity",
-    detail: "Ultra-low surface energy repels acidic dew, coastal humidity from Dubai Marina, and airborne calcium minerals before drying."
+    title: "Coastal Salt & Acid Barrier",
+    detail: "Ultra-low surface energy repels Atlantic salt fog, heavy subtropical downpours, and corrosive lovebug acid etching before permanent bonding."
   }
 ];
 
 export const FAQ_DATA = [
   {
-    q: "Does PPF installation void dealer warranties with Al Tayer (Ferrari), Habtoor (Bugatti/Bentley), or Al Nabooda (Porsche)?",
+    q: "Does PPF installation void dealer warranties with The Collection (Ferrari/Porsche), Prestige Imports (Lamborghini/Pagani), or Braman Motorcars?",
     a: "No. Our installations strictly preserve OEM warranties. We utilize factory CAD templates cut via digital DAP plotters, entirely avoiding razor cuts against paintwork and eliminating unnecessary disassembly of calibrated factory bumper clips, parking sensors, and radar arrays."
   },
   {
-    q: "How does the self-healing film perform during Dubai summer heat?",
-    a: "Remarkably. In ambient temperatures above 30°C, the elastomeric top-coat self-heals swirl marks and light abrasions in real time without requiring heat guns or hot water. Under direct Dubai sun, minor defects disappear within minutes."
+    q: "How does the self-healing film perform during Florida and Texas summer heat?",
+    a: "Remarkably. In ambient temperatures above 85°F, the elastomeric top-coat self-heals swirl marks and light abrasions in real time without requiring heat guns or hot water. Under direct sun, minor wash scratches disappear within minutes."
   },
   {
-    q: "Can you provide RTA-compliant window tinting and color registration support?",
-    a: "Yes. Our nano-ceramic window films are 100% compliant with Dubai RTA regulations (available in 30% and 50% legal light transmission). For full Satin/Color PPF wraps, we provide all required technical documentation and invoices for immediate RTA system registration."
+    q: "Can you provide Florida DOT-compliant window tinting and documentation?",
+    a: "Yes. Our nano-ceramic window films are 100% compliant with Florida Statute § 316.2953 and Texas DOT regulations (available in 15%, 28%, and 30% legal light transmission). We provide official state compliance certificates with every install."
   },
   {
-    q: "What makes cryogenic dry-ice detailing safer than steam or water pressure washing?",
-    a: "Dry-ice pellets (-78.5°C) sublimate directly from solid to gas on contact. There is zero moisture, zero electrical short risk for 400V/800V hybrid powertrains (SF90, Revuelto, 296 GTB), and zero chemical corrosion on raw magnesium or aluminum components."
+    q: "What makes cryogenic dry-ice detailing safer than steam or water pressure washing for exotic hybrids?",
+    a: "Dry-ice pellets (-109.3°F / -78.5°C) sublimate directly from solid to gas on contact. There is zero moisture, zero electrical short risk for 400V/800V hybrid powertrains (SF90, Revuelto, 296 GTB, Artura), and zero chemical corrosion on raw magnesium or aluminum components."
   },
   {
-    q: "Do you offer enclosed flatbed vehicle transport across the Emirates?",
-    a: "Yes. We operate our own hydraulic enclosed low-loader transporters equipped with soft-winch systems, specifically designed for ultra-low clearance hypercars across Dubai, Abu Dhabi, and Sharjah."
+    q: "Do you offer enclosed hydraulic vehicle transport across Florida and interstate corridors to Texas?",
+    a: "Yes. We operate our own dedicated hydraulic enclosed low-loader transporters equipped with soft-winch air-ride systems, serving Miami, Palm Beach, Naples, and Orlando, plus scheduled express transport to our Dallas and Austin collection hubs."
   }
 ];
 
+/**
+ * 1-Tap SMS Link builder compatible with iOS (iMessage/SMS) and Android
+ * Using `?&body=` ensures compatibility across iOS Safari, Chrome, and Android SMS dispatchers.
+ */
+export function buildSMSLink(serviceName: string, vehicleModel = "", packageTier = ""): string {
+  let message = `Hello APEX USA (Miami Atelier),\nI would like to inquire about booking a slot for my vehicle.`;
+  if (serviceName) message += `\nService: ${serviceName}`;
+  if (packageTier) message += `\nPackage: ${packageTier}`;
+  if (vehicleModel) message += `\nVehicle: ${vehicleModel}`;
+  message += `\nPlease provide current bay availability and instant quote.`;
+
+  return `sms:${ATELIER_INFO.smsRaw}?&body=${encodeURIComponent(message)}`;
+}
+
+export function buildGPSLink(): string {
+  const message = `Hello APEX Concierge, sending my vehicle pickup location for enclosed hydraulic carrier intake:`;
+  return `sms:${ATELIER_INFO.smsRaw}?&body=${encodeURIComponent(message)}`;
+}
+
 export function buildWhatsAppLink(serviceName: string, vehicleModel = "", packageTier = ""): string {
-  let message = `Hello APEX DUBAI,\nI would like to inquire about booking a slot for my vehicle.`;
+  let message = `Hello APEX USA,\nI would like to inquire about booking a slot for my vehicle.`;
   if (serviceName) message += `\nService: ${serviceName}`;
   if (packageTier) message += `\nPackage: ${packageTier}`;
   if (vehicleModel) message += `\nVehicle: ${vehicleModel}`;

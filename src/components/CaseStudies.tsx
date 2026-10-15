@@ -1,6 +1,6 @@
 import React from 'react';
-import { CASE_STUDIES, buildWhatsAppLink } from '../data/atelierData';
-import { ShieldCheck, MapPin, Gauge, ArrowUpRight } from 'lucide-react';
+import { CASE_STUDIES, buildSMSLink } from '../data/atelierData';
+import { ShieldCheck, MapPin, Gauge, ArrowUpRight, MessageSquare } from 'lucide-react';
 
 export const CaseStudies: React.FC = () => {
   return (
@@ -9,15 +9,15 @@ export const CaseStudies: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-6 border-b border-white/[0.08]">
           <div>
-            <div className="text-[11px] font-mono tracking-widest text-[#C5A48E] uppercase mb-2">
-              PROVEN TELEMETRY // DUBAI DELIVERIES
+            <div className="text-[11px] font-mono tracking-widest text-[#0A84FF] uppercase mb-2">
+              PROVEN TELEMETRY // US DELIVERIES
             </div>
             <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight">
               COMMISSIONED <span className="text-[#C5A48E]">CASE STUDIES</span>
             </h2>
           </div>
           <div className="max-w-md text-zinc-400 text-sm font-sans leading-relaxed">
-            Full technical dossiers on exotic hypercars delivered from our Al Quoz cleanroom facility. Precise paint depth profiling and written GCC warranties.
+            Full technical dossiers on exotic hypercars delivered from our Miami Design District cleanroom facility. Precise paint depth profiling and written nationwide warranties.
           </div>
         </div>
 
@@ -33,10 +33,10 @@ export const CaseStudies: React.FC = () => {
                 <img
                   src={item.image}
                   alt={item.vehicle}
-                  className="w-full h-full object-cover object-center grayscale-[25%] hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-full object-cover object-center grayscale-[20%] hover:grayscale-0 transition-all duration-500"
                   loading="lazy"
                 />
-                <div className="absolute top-4 left-4 px-2.5 py-1 bg-black/80 border border-white/[0.1] text-xs font-mono text-[#C5A48E] rounded-[2px] backdrop-blur-md">
+                <div className="absolute top-4 left-4 px-2.5 py-1 bg-black/80 border border-white/[0.1] text-xs font-mono text-[#0A84FF] rounded-[2px] backdrop-blur-md">
                   CASE 0{index + 1} // {item.year}
                 </div>
               </div>
@@ -46,7 +46,7 @@ export const CaseStudies: React.FC = () => {
                 <div>
                   <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
                     <div className="flex items-center gap-2 text-xs font-mono text-zinc-400">
-                      <MapPin className="w-3.5 h-3.5 text-[#C5A48E]" />
+                      <MapPin className="w-3.5 h-3.5 text-[#0A84FF]" />
                       <span>{item.clientArea}</span>
                     </div>
                     <div className="px-2 py-0.5 bg-zinc-900 border border-white/[0.08] text-[11px] font-mono text-zinc-300 rounded-[2px]">
@@ -79,7 +79,7 @@ export const CaseStudies: React.FC = () => {
                     </div>
                     <div className="p-3 bg-zinc-900/40 border border-white/[0.04] rounded-[2px]">
                       <div className="text-zinc-500 text-[10px]">FINAL GLOSS</div>
-                      <div className="text-[#C5A48E] font-bold">{item.specs.glossLevel}</div>
+                      <div className="text-[#0A84FF] font-bold">{item.specs.glossLevel}</div>
                     </div>
                     <div className="p-3 bg-zinc-900/40 border border-white/[0.04] rounded-[2px]">
                       <div className="text-zinc-500 text-[10px]">FILM PROFILE</div>
@@ -97,17 +97,16 @@ export const CaseStudies: React.FC = () => {
                   <div>
                     <div className="text-[10px] font-mono text-zinc-500">COMMISSION INVOICE TOTAL</div>
                     <div className="text-xl sm:text-2xl font-bold font-mono text-white">
-                      AED {item.priceAED.toLocaleString()}
+                      ${item.priceUSD.toLocaleString()}
                     </div>
                   </div>
 
                   <a
-                    href={buildWhatsAppLink(`Case Study Inquire: ${item.vehicle}`, item.vehicle, item.scope)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-5 py-3 bg-zinc-900 hover:bg-zinc-800 border border-white/[0.12] hover:border-[#C5A48E] text-white hover:text-[#C5A48E] font-mono text-xs tracking-wider transition-mechanical rounded-[2px]"
+                    href={buildSMSLink(`Case Study Inquire: ${item.vehicle}`, item.vehicle, item.scope)}
+                    className="flex items-center gap-2 px-5 py-3 bg-zinc-900 hover:bg-zinc-800 border border-white/[0.12] hover:border-[#0A84FF] text-white hover:text-blue-300 font-mono text-xs tracking-wider transition-mechanical rounded-[2px]"
                   >
-                    <span>INQUIRE SIMILAR BUILD</span>
+                    <MessageSquare className="w-4 h-4 text-blue-400" />
+                    <span>INQUIRE BUILD (1-TAP SMS)</span>
                     <ArrowUpRight className="w-4 h-4" />
                   </a>
                 </div>

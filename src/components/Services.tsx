@@ -1,6 +1,6 @@
 import React from 'react';
-import { SERVICES_DATA, buildWhatsAppLink } from '../data/atelierData';
-import { Shield, Clock, Award, ArrowUpRight, Check } from 'lucide-react';
+import { SERVICES_DATA, buildSMSLink } from '../data/atelierData';
+import { Clock, Award, ArrowUpRight, Check, MessageSquare } from 'lucide-react';
 
 interface ServicesProps {
   onSelectService: (serviceName: string) => void;
@@ -13,7 +13,7 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-6 border-b border-white/[0.08]">
           <div>
-            <div className="text-[11px] font-mono tracking-widest text-[#C5A48E] uppercase mb-2">
+            <div className="text-[11px] font-mono tracking-widest text-[#0A84FF] uppercase mb-2">
               SURFACE ARCHITECTURE // ATELIER CAPABILITIES
             </div>
             <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight">
@@ -21,7 +21,7 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
             </h2>
           </div>
           <div className="max-w-md text-zinc-400 text-sm font-sans leading-relaxed">
-            All procedures conducted inside temperature-regulated, positive-pressure cleanroom bays in Al Quoz 3. Digital CAD precision plotting eliminates razor contact with factory paint.
+            All procedures conducted inside temperature-regulated, positive-pressure cleanroom bays in the Miami Design District. Digital CAD precision plotting eliminates razor contact with factory paint.
           </div>
         </div>
 
@@ -30,7 +30,7 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
           {SERVICES_DATA.map((service) => (
             <div
               key={service.id}
-              className="group bg-[#09090b] border border-white/[0.08] hover:border-[#C5A48E]/50 transition-mechanical flex flex-col justify-between p-8 rounded-[2px]"
+              className="group bg-[#09090b] border border-white/[0.08] hover:border-[#0A84FF]/50 transition-mechanical flex flex-col justify-between p-8 rounded-[2px]"
             >
               <div>
                 {/* Header Tag and Code */}
@@ -44,7 +44,7 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
                 </div>
 
                 {/* Title */}
-                <h3 className="font-display font-bold text-2xl text-white tracking-wide uppercase mb-4 group-hover:text-[#C5A48E] transition-colors">
+                <h3 className="font-display font-bold text-2xl text-white tracking-wide uppercase mb-4 group-hover:text-blue-300 transition-colors">
                   {service.title}
                 </h3>
 
@@ -57,7 +57,7 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
                 <div className="space-y-2 mb-8">
                   {service.specs.map((spec, i) => (
                     <div key={i} className="flex items-start gap-2 text-[11px] font-sans text-zinc-300">
-                      <Check className="w-3.5 h-3.5 text-[#C5A48E] shrink-0 mt-0.5" />
+                      <Check className="w-3.5 h-3.5 text-[#0A84FF] shrink-0 mt-0.5" />
                       <span>{spec}</span>
                     </div>
                   ))}
@@ -81,7 +81,7 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
                   <div>
                     <div className="text-[10px] text-zinc-500">FROM</div>
                     <div className="text-lg font-bold text-white font-mono">
-                      AED {service.startingPriceAED.toLocaleString()}
+                      ${service.startingPriceUSD.toLocaleString()}
                     </div>
                   </div>
 
@@ -93,13 +93,11 @@ export const Services: React.FC<ServicesProps> = ({ onSelectService }) => {
                       SPECIFY
                     </button>
                     <a
-                      href={buildWhatsAppLink(service.title)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 bg-[#C5A48E] hover:bg-[#d5b59f] text-black rounded-[2px] transition-mechanical"
-                      title="Direct WhatsApp Consultation"
+                      href={buildSMSLink(service.title)}
+                      className="p-2 bg-gradient-to-r from-[#0A84FF] to-[#0066E1] hover:from-[#2192FF] hover:to-[#0A73F5] text-white rounded-[2px] transition-mechanical shadow-sm"
+                      title="Direct 1-Tap SMS Consultation"
                     >
-                      <ArrowUpRight className="w-4 h-4" />
+                      <MessageSquare className="w-4 h-4" />
                     </a>
                   </div>
                 </div>

@@ -16,15 +16,15 @@ export const ClimateDefense: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-6 border-b border-white/[0.08]">
           <div>
-            <div className="text-[11px] font-mono tracking-widest text-[#C5A48E] uppercase mb-2">
-              ENGINEERING REGIME // GCC SPECIFICATION
+            <div className="text-[11px] font-mono tracking-widest text-[#0A84FF] uppercase mb-2">
+              ENGINEERING REGIME // SUNBELT & COASTAL SPECIFICATION
             </div>
             <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight">
-              HARDENED FOR THE <span className="text-[#C5A48E]">DUBAI CLIMATE</span>
+              HARDENED FOR THE <span className="text-[#C5A48E]">AMERICAN SUNBELT</span>
             </h2>
           </div>
           <div className="max-w-md text-zinc-400 text-sm font-sans leading-relaxed">
-            Standard European & North American detailing chemicals fail when subjected to UAE extreme thermal cycling and airborne quartz minerals. Our specifications are chemically formulated for Middle Eastern operating conditions.
+            Standard commercial detailing chemicals break down when subjected to Florida & Texas thermal cycling, extreme UV radiation, and Atlantic coastal salt spray. Our specifications are chemically formulated for harsh southern operating conditions.
           </div>
         </div>
 
@@ -33,7 +33,7 @@ export const ClimateDefense: React.FC = () => {
           {CLIMATE_METRICS.map((item, idx) => (
             <div
               key={item.title}
-              className="p-6 bg-black/60 border border-white/[0.08] hover:border-[#C5A48E]/40 transition-mechanical flex flex-col justify-between rounded-[2px]"
+              className="p-6 bg-black/60 border border-white/[0.08] hover:border-[#0A84FF]/40 transition-mechanical flex flex-col justify-between rounded-[2px]"
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
@@ -55,7 +55,7 @@ export const ClimateDefense: React.FC = () => {
               </div>
 
               <div className="mt-6 pt-4 border-t border-white/[0.06] flex items-center gap-2 text-[10px] font-mono text-zinc-500">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-blue-400" />
                 <span>LABORATORY VERIFIED SPEC</span>
               </div>
             </div>
@@ -66,16 +66,16 @@ export const ClimateDefense: React.FC = () => {
         <div className="mt-12 p-6 bg-zinc-950 border border-white/[0.08] rounded-[2px] grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-xs">
           <div className="space-y-1">
             <div className="text-zinc-500">SURFACE HEAT RESISTANCE</div>
-            <div className="text-white font-semibold">140°C Continuous / 180°C Peak Flash</div>
+            <div className="text-white font-semibold">280°F Continuous / 350°F Peak Flash</div>
             <div className="text-zinc-400 text-[11px]">Zero polymer delamination or edge bubbling</div>
           </div>
           <div className="space-y-1">
-            <div className="text-zinc-500">BALLISTIC SAND RESISTANCE</div>
+            <div className="text-zinc-500">INTERSTATE DEBRIS DEFENSE</div>
             <div className="text-white font-semibold">ASTM D3170 SAE J400 Gravelometer Pass</div>
-            <div className="text-zinc-400 text-[11px]">Shields against Sheikh Zayed Rd high-speed stone chips</div>
+            <div className="text-zinc-400 text-[11px]">Shields against I-95 & Florida Turnpike high-speed rock chips</div>
           </div>
           <div className="space-y-1">
-            <div className="text-zinc-500">SOLAR INFRARED REJECTION</div>
+            <div className="text-zinc-500">SOLAR INFRARED & UV REJECTION</div>
             <div className="text-white font-semibold">99.8% IR Spectral Band Rejection</div>
             <div className="text-zinc-400 text-[11px]">Protects cabin aniline leather & naked carbon weaves</div>
           </div>
