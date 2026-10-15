@@ -5,7 +5,6 @@ import { HeroBoxes } from './components/HeroBoxes';
 import { ServicesSection } from './components/ServicesSection';
 import { BeforeAfterSection } from './components/BeforeAfterSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
-import { GallerySection } from './components/GallerySection';
 import { FaqSection } from './components/FaqSection';
 import { PreFooter } from './components/PreFooter';
 import { FooterSection } from './components/FooterSection';
@@ -60,12 +59,7 @@ export const App: React.FC = () => {
       {/* 6. Client Testimonials (Verified Google Reviews) */}
       <TestimonialsSection />
 
-      {/* 7. Gallery Grid */}
-      <GallerySection
-        onOpenAppointment={() => handleOpenAppointment()}
-      />
-
-      {/* 8. Frequently Asked Questions Accordion */}
+      {/* 7. Frequently Asked Questions Accordion */}
       <FaqSection />
 
       {/* 9. Pre-Footer Call to Action Banner */}
